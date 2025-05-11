@@ -1,0 +1,14 @@
+{
+  "name": "paycheckright-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.0.0",
+    "tesseract.js": "^2.1.5",
+    "axios": "^1.4.0",
+    "@mui/material": "^5.15.0",
+    "recharts": "^2.7.2"
+  }
+}
