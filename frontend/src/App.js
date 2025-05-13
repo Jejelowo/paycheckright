@@ -77,7 +77,10 @@ const UploadPaystub = () => {
       const suggestions = simulateOptions(analysis.estimated_refund);
       const payload = { ...analysis, suggestions };
 
-      localStorage.setItem('paycheckright_analysis', JSON.stringify(payload));
+      if (typeof window !== 'undefined') {
+  localStorage.setItem('paycheckright_analysis', JSON.stringify(payload));
+}
+
       navigate('/results');
     } catch (error) {
       console.error('OCR or backend error:', error);
