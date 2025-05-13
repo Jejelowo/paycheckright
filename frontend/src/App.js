@@ -119,7 +119,10 @@ if (typeof window !== 'undefined') {
 };
 
 const Results = () => {
-  const result = JSON.parse(localStorage.getItem('paycheckright_analysis') || '{}');
+  const result = typeof window !== 'undefined'
+  ? JSON.parse(localStorage.getItem('paycheckright_analysis') || '{}')
+  : {};
+
   const [sliderValue, setSliderValue] = useState(30);
   const handleSliderChange = (e, value) => setSliderValue(value);
 
