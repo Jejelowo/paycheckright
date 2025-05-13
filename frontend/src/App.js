@@ -77,11 +77,11 @@ const UploadPaystub = () => {
       const suggestions = simulateOptions(analysis.estimated_refund);
       const payload = { ...analysis, suggestions };
 
-      if (typeof window !== 'undefined') {
+if (typeof window !== 'undefined') {
   localStorage.setItem('paycheckright_analysis', JSON.stringify(payload));
+  window.location.href = '/results'; // hard reload avoids rendering bugs
 }
 
-      navigate('/results');
     } catch (error) {
       console.error('OCR or backend error:', error);
       setOcrText('Failed to process image.');
